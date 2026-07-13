@@ -1,0 +1,26 @@
+{
+  "manifest_version": 3,
+  "name": "PDF Sentence Navigator",
+  "version": "1.0.0",
+  "description": "TAB/SHIFT+TAB-ით წინადადებებში გადაადგილება PDF დოკუმენტში (100% ლოკალურად, სერვერზე მონაცემი არ იგზავნება).",
+  "icons": {
+    "16": "icons/icon16.png",
+    "48": "icons/icon48.png",
+    "128": "icons/icon128.png"
+  },
+  "permissions": [
+    "declarativeNetRequest"
+  ],
+  "host_permissions": [
+    "<all_urls>"
+  ],
+  "background": {
+    "service_worker": "background.js"
+  },
+  "web_accessible_resources": [
+    {
+      "resources": ["viewer.html", "viewer.js", "viewer.css", "libs/*"],
+      "matches": ["<all_urls>"]
+    }
+  ]
+}
